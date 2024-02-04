@@ -13,7 +13,12 @@ Q = {
     ('xB', 'yB'): 2,
     ('xC', 'yC'): 2,
 }
-
+'''  
+penalty_coefficient = 10  # Adjust as needed
+Q[('xA', 'yA')] += penalty_coefficient
+Q[('xB', 'yB')] += penalty_coefficient
+Q[('xC', 'yC')] += penalty_coefficient
+'''
 # Create a BinaryQuadraticModel from the QUBO coefficients
 bqm = BinaryQuadraticModel.from_qubo(Q)
 
